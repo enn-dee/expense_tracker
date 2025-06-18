@@ -5,9 +5,9 @@ async function Balance() {
     const { balance } = await getUserBalance();
 
     return (
-        <div className="w-40 mx-auto my-2 border border-black/20 shadow-xl p-2 rounded-lg text-center ">
+        <div className="w-72 mx-auto my-2 border border-black/20 shadow-xl p-2 rounded-lg text-center ">
             <h4>Your Balance</h4>
-            <h1 className="text-xl font-semibold">${numberCommas(balance ?? 0) }</h1>
+            <h1 className="text-xl font-semibold">${numberCommas(Number(balance?.toFixed(2)) ?? 0)}</h1>
         </div>
     )
 }
